@@ -40,6 +40,7 @@
   ],
   "scripts": {
     "cm": "cz",
+    "deploy": "npm version patch && npm publish",
     "build": "tsup && tsc --emitDeclarationOnly",
     "test": "jest",
     "test-storybook": "test-storybook",
