@@ -20,7 +20,18 @@ export const defaultCountries: CountryData[] = [
   ['Andorra', 'ad', '376'],
   ['Angola', 'ao', '244'],
   ['Antigua and Barbuda', 'ag', '1268'],
-  ['Argentina', 'ar', '54', '(..) ........', 0],
+  [
+    'Argentina',
+    'ar',
+    '54',
+    {
+      default: '(..) ........',
+      '/^9/': '(..) ... .... ....',
+      '/^(\d{2})\d{8}$/': '(..) ........',
+      '/^(\d{2})\d{9}$/': '(..) ... .... ....',
+    },
+    0,
+  ],
   ['Armenia', 'am', '374', '.. ......'],
   ['Aruba', 'aw', '297'],
   [
