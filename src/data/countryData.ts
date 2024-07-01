@@ -25,10 +25,10 @@ export const defaultCountries: CountryData[] = [
     'ar',
     '54',
     {
-      default: '(..) ........',
-      '/^9/': '(..) ... .... ....',
-      '/^(\d{2})\d{8}$/': '(..) ........',
-      '/^(\d{2})\d{9}$/': '(..) ... .... ....',
+      default: '(..) ........', // Para 10 dígitos
+      '/^9/': '. .. ....-....', // Para 11 dígitos com o prefixo "9"
+      '/^(\d{2})\d{8}$/': '. .........', // 10 dígitos sem prefixo "9"
+      '/^(\d{2})\d{9}$/': '. .. ....-....', // 11 dígitos com prefixo "9"
     },
     0,
   ],
